@@ -1,0 +1,9 @@
+<div class="page">
+    <ul>
+        <li><b>Application:</b>&nbsp;Modern</li>
+        <li><b>Page:</b>&nbsp;Module 2</li>
+        <li><b>Redirected:</b>&nbsp;<span *ngIf="inputData.source == 'App2'">No</span><span class='highlight' *ngIf="inputData.source != 'App2'">Yes</span></li>
+        <li><b>Description:</b> {{inputData.description}}</li>
+        <li><b>Time:</b> {{inputData.time.toLocaleTimeString('en-US')}}</li>
+    </ul>
+</div>
