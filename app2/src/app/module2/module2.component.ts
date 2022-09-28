@@ -8,11 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class Module2Component implements OnInit {
 
-  inputData = {
-    source: 'App2',
-    description: 'Using local data',
-    time: new Date
-  }
+  inputData: any = {} // Not using model only to keep demo small and focused
   
   constructor(private router: ActivatedRoute) { }
 
@@ -22,6 +18,13 @@ export class Module2Component implements OnInit {
     if(encodedData) {
       this.inputData = JSON.parse(decodeURIComponent(encodedData));
       this.inputData.time = new Date(this.inputData.time);
+    } else {
+      // No data passed in, so get data from local state, remote API, environment, etc.
+      this.inputData = {
+        source: 'App2',
+        description: 'Using local data',
+        time: new Date
+      }
     }
   }
 

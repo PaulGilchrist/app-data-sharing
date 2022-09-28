@@ -1,3 +1,4 @@
+// Could use Redux if not wanting to use custom state managment service/services
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class StateService {
 
-  state: any = null;
+  state: any = null;  // Not using model only to keep demo small and focused
 
   constructor() {
     if (this.state == null) {
@@ -22,15 +23,16 @@ export class StateService {
     }
   }
 
-  saveState() {
-    sessionStorage.setItem('state', JSON.stringify(this.state));
-  }
-
   getState() {
     const sessionState = sessionStorage.getItem('state');
     if (sessionState) {
       this.state = JSON.parse(sessionState);
     }
   }
+  
+  saveState() {
+    sessionStorage.setItem('state', JSON.stringify(this.state));
+  }
+
 
 }

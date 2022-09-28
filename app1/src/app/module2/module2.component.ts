@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { StateService } from '../state.service';
+import { StateService } from '../services/state.service';
 
 @Component({
   selector: 'app-module2',

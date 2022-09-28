@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { Module1Component } from './module1/module1.component';
 import { Module2Component } from './module2/module2.component';
-import { StateService } from './state.service';
+import { StateService } from './services/state.service';
 
 @NgModule({
   declarations: [
