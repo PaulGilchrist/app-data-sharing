@@ -4,8 +4,8 @@ import { StateService } from '../state.service';
 
 @Component({
   selector: 'app-module2',
-  templateUrl: './module2.component.html',
-  styleUrls: ['./module2.component.scss']
+  template: '',
+  styleUrls: []
 })
 export class Module2Component implements OnInit {
 
